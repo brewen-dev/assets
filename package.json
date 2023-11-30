@@ -1,0 +1,31 @@
+{
+  "name": "@brewen-dev/assets",
+  "description": "Global assets for @brewen-dev projects",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brewen-dev/assets.git"
+  },
+  "scripts": {
+    "setup": "bun install",
+    "release": "bun x standard-version",
+    "build": "bun x grunt build",
+    "commitlint": "bun x commitlint --edit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "grunt": "^1.6.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "semantic-release": "^22.0.8"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

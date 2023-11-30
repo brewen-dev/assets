@@ -1,0 +1,39 @@
+{
+  "branches": [
+    "master"
+  ],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        preset: "conventionalcommits"
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        pkgRoot: "dist"
+      }
+    ],
+    "@semantic-release/git",
+    [
+      "@semantic-release/exec",
+      {
+        prepareCmd: "cd dist && zip -qq -r ../assets-${nextRelease.version}.zip *"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        assets: [
+          {
+            path: "assets-*.zip",
+            label: "@brewen-dev/assets ${nextRelease.version}"
+          }
+        ]
+      }
+    ]
+  ]
+}
