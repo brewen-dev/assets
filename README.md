@@ -9,5 +9,5 @@ To use the library, you can simply import any asset you want to use in your proj
 You can also add them directly as static files in your project. (for favicon, robots.txt, etc.)
 
 ```ts
-import Logo from '@brewen-dev/assets/lib/branding/logo.svg';
+import Logo from '@brewen-dev/assets/lib/favicon.svg';
 ```
